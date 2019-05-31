@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>one tour</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="headerTop">
+        <form>
+          <input type="text" name="search" placeholder="search">
+          <i class="fas fa-search"></i>
+        </form>
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="login">
+          <a href="#">로그인</a>
+          <span>|</span>
+          <a href="#">회원가입</a>
+        </div>
+      </div>
+      <nav class="menu">
+          <ul class="gnb">
+            <li>
+              <a href="#">여행정보</a>
+                <ul class="lnb">
+                  <li><a href="#">여행도시</a></li>
+                  <li><a href="#">테마영상</a></li>
+                  <li><a href="#">여행준비</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">티켓/투어</a>
+                <ul class="lnb">
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">동남아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">아메리카</a></li>
+                  <li><a href="#">남태평양</a></li>
+                  <li><a href="#">국내</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">항공</a>
+                <ul class="lnb">
+                  <li><a href="#">최저가 항공</a></li>
+                  <li><a href="#">특가항공</a></li>
+                  <li><a href="#">추천항공</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">호텔</a>
+                <ul class="lnb">
+                  <li><a href="#">최저가 호텔</a></li>
+                  <li><a href="#">특가숙박</a></li>
+                  <li><a href="#">추천호텔</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">무료 이벤트</a>
+                <ul class="lnb">
+                  <li><a href="#">진행 이벤트</a></li>
+                  <li><a href="#">당첨자 발표</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main_banner">
+      <ul class="main_bxslider">
+        <li>
+          <img src="images/mainbanner1.png" alt="메인배너1">
+        </li>
+        <li>
+          <img src="images/mainbanner2.png" alt="메인배너2">
+        </li>
+        <li>
+          <img src="images/mainbanner3.png" alt="메인배너3">
+        </li>
+        <li>
+          <img src="images/mainbanner4.png" alt="메인배너4">
+        </li>
+      </ul>
+
+        <div class="slogan">
+          <strong>
+            즐거운 여행 / 신나는 투어<br>
+            <p>ONETOUR</p>
+          </strong>
+          <p>당장 떠나요~</p>
+          <div class="mini_box"></div>
+        </div>
+    </section>
+
+
+    <section class="search_section">
+      <ul class="tabs">
+        <li class="current" data-tab="tab1">호텔</li>
+        <li data-tab="tab2">항공</li>
+      </ul>
+      <div id="tab1" class="tab_content current">
+        <div class="hotelTop">
+          <form>
+            <label>목적지</label>
+            <input id="searchinput" type="text" placeholder="도시,지역 or 호텔명">
+            <span id="searchclear"></span>
+            <i class="fas fa-map-marker-alt"></i>
+          </form>
+          <form>
+            <label>체크인</label>
+            <input type="text" id="sdate" class="check-in"  placeholder="날짜선택">
+            <i class="far fa-calendar-alt"></i>
+          </form>
+          <form>
+            <label>체크아웃</label>
+            <input type="text" id="edate" class="check-out"  placeholder="날짜선택">
+            <i class="far fa-calendar-alt"></i>
+          </form>
+          <form>
+            <label>객실</label>
+            <i class="fas fa-bed"></i>
+            <select>
+              <option style="font-size:15px;">객실수 1</option>
+              <option style="font-size:15px;">객실수 2</option>
+              <option style="font-size:15px;">객실수 3</option>
+              <option style="font-size:15px;">객실수 4</option>
+              <option style="font-size:15px;">객실수 5</option>
+            </select>
+            <i class="far fa-user"></i>
+            <select>
+              <option style="font-size:15px;">인원 1</option>
+              <option style="font-size:15px;">인원 2</option>
+              <option style="font-size:15px;">인원 3</option>
+              <option style="font-size:15px;">인원 4</option>
+              <option style="font-size:15px;">인원 5</option>
+            </select>
+          </form>
+          <div>
+            <p>+옵션추가</p>
+          </div>
+        </div>
+        <div class="hotelBottom">
+          <button>검색</button>
+        </div>
+      </div>
+      <div id="tab2" class="tab_content">
+        <div class="airTop">
+          <form>
+            <label>출발지</label>
+            <input id="searchinput" type="text" placeholder="도시명">
+            <i class="fas fa-map-marker-alt"></i>
+          </form>
+          <form>
+            <label>도착지</label>
+            <input id="searchinput" type="text" placeholder="도시명">
+            <i class="fas fa-map-marker-alt"></i>
+          </form>
+          <form>
+            <label>체크인</label>
+            <input type="text" id="sdate" class="check-in"  placeholder="날짜선택">
+            <i class="far fa-calendar-alt"></i>
+          </form>
+          <form>
+            <label>체크아웃</label>
+            <input type="text" id="edate" class="check-out"  placeholder="날짜선택">
+            <i class="far fa-calendar-alt"></i>
+          </form>
+          <form>
+            <label>인원</label>
+            <i class="far fa-user adult"></i>
+            <select>
+              <option style="font-size:15px;">성인 1</option>
+              <option style="font-size:15px;">성인 2</option>
+              <option style="font-size:15px;">성인 3</option>
+              <option style="font-size:15px;">성인 4</option>
+              <option style="font-size:15px;">성인 5</option>
+            </select>
+            <i class="far fa-user child"></i>
+            <select>
+              <option style="font-size:15px;">아동 1</option>
+              <option style="font-size:15px;">아동 2</option>
+              <option style="font-size:15px;">아동 3</option>
+              <option style="font-size:15px;">아동 4</option>
+              <option style="font-size:15px;">아동 5</option>
+            </select>
+            <i class="far fa-user baby"></i>
+            <select>
+              <option style="font-size:15px;">유아 1</option>
+              <option style="font-size:15px;">유아 2</option>
+              <option style="font-size:15px;">유아 3</option>
+              <option style="font-size:15px;">유아 4</option>
+              <option style="font-size:15px;">유아 5</option>
+            </select>
+          </form>
+          <form>
+            <label for="opt1" class="radio">
+              <input type="radio" name="rdo" id="opt1" class="hidden"/>
+              <span class="label"></span>
+              <p>왕복</p>
+            </label>
+            <label for="opt2" class="radio2">
+              <input type="radio" name="rdo" id="opt2"   class="hidden"/>
+              <span class="label2"></span>
+              <p>편도</p>
+            </label>
+          </form>
+        </div>
+        <div class="hotelBottom">
+          <button>검색</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="best_city">
+      <div class="title_city">
+        <p>BEST TOP 7</p>
+        <h1>인기있는 여행지를 둘러봐요</h1>
+      </div>
+      <ul>
+        <li class="rank_01">
+          <a href="#">
+            <img src="images/paris.png" alt="파리">
+            <span class="cover"></span>
+            <p>
+              <strong>파리</strong>
+              <br>paris
+            </p>
+          </a>
+        </li>
+        <li class="rank_02">
+          <a href="#">
+            <img src="images/newyork.png" alt="뉴욕">
+            <span class="cover"></span>
+            <p>
+              <strong>뉴욕</strong>
+              <br>New York
+            </p>
+          </a>
+        </li>
+        <li class="rank_03">
+          <a href="#">
+            <img src="images/shanghai.png" alt="상하이">
+            <span class="cover"></span>
+            <p>
+              <strong>상하이</strong>
+              <br>Shanghai
+            </p>
+          </a>
+        </li>
+        <li class="rank_04">
+          <a href="#">
+            <img src="images/osaka.png"  alt="오사카">
+            <span class="cover"></span>
+            <p class="f">
+              <strong>오사카</strong>
+              <br>Osaka
+            </p>
+          </a>
+        </li>
+        <li class="rank_05">
+          <a href="#">
+            <img src="images/danang.png" alt="다낭">
+            <span class="cover"></span>
+            <p>
+              <strong>다낭</strong>
+              <br>Danang
+            </p>
+          </a>
+        </li>
+        <li class="rank_06">
+          <a href="#">
+            <img src="images/london.png" alt="런던">
+            <span class="cover"></span>
+            <p>
+              <strong>런던</strong>
+              <br>London
+            </p>
+          </a>
+        </li>
+        <li class="rank_07">
+          <a href="#">
+            <img src="images/hongkong.png" alt="홍콩">
+            <span class="cover"></span>
+            <p>
+              <strong>홍콩</strong>
+              <br>HongKong
+            </p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="special_offers">
+      <div class="title_offers">
+        <p>ONETOUR SPECIAL</p>
+        <h1>ONETOUR만의 특가를 누려보세요</h1>
+      </div>
+      <ul class="tabs">
+        <li class="currents" data-tabs="tab_1">아시아</li>
+        <li data-tabs="tab_2">동남아</li>
+        <li data-tabs="tab_3">유럽</li>
+        <li data-tabs="tab_4">아메리카</li>
+        <li data-tabs="tab_5">남태평양</li>
+        <li data-tabs="tab_6">국내</li>
+      </ul>
+      <div id="tab_1" class="tab_contents currents">
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/osaka-universal.png" alt="유니버셜 스튜디오">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>오사카</p>
+            <p>[오사카] 유니버셜 스튜디오 재팬</p>
+            <p>입장권</p>
+            <div class="price">
+              <p>87,600원</p>
+              <p>즉시 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/makao-tower.png" alt="마카오타워 전망대">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>마카오</p>
+            <p>[마카오] 타워 전망대 입장권</p>
+            <div class="price">
+              <p>17,100원</p>
+              <p>즉시 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/roppongi-hills.png" alt="롯본기힐즈 전망대">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>도쿄</p>
+            <p>[도쿄] 롯본기힐즈 전망대</p>
+            <div class="price">
+              <p>8,800원</p>
+              <p>즉시 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/disneyland.png" alt="홍콩 디즈니랜드">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>홍콩</p>
+            <p>[홍콩] 디즈니랜드</p>
+            <div class="price">
+              <p>92,000원</p>
+              <p>2019년 3월 10일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab_2" class="tab_contents">
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/taiwan.png" alt="대만">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>대만</p>
+            <p>[대만] 대만 버스투어</p>
+            <p>예류 / 스펀 / 지우펀야경</p>
+            <div class="price">
+              <p>10,000원</p>
+              <p>2019년 3월 15일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/taipei.png" alt="타이페이 101타워">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>타이페이</p>
+            <p>[타이페이] 101타워 전망대 입장권</p>
+            <div class="price">
+              <p>18,500원</p>
+              <p>2019년 3월 10일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/bangkok.png" alt="방콕">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>방콕</p>
+            <p>[방콕] 왕궁 / 에메랄드,새벽 사원</p>
+            <div class="price">
+              <p>27,000원</p>
+              <p>2019년 3월 11일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/banahill.png" alt="바나힐">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>다낭</p>
+            <p>[다낭] 다낭 시내-바나힐 왕복</p>
+            <p>셔틀버스 (매일 출발)</p>
+            <div class="price">
+              <p>전체 15%할인</p>
+              <p>즉시 사용가능</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab_3" class="tab_contents">
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/paristour.png" alt="파리">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>파리</p>
+            <p>[파리] 파리 시내 일일투어</p>
+            <div class="price">
+              <p>13,000원</p>
+              <p>2019년 3월 8일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/artgallery.png" alt="크뢸러뮐러 미술관">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>암스테르담</p>
+            <p>[암스테르담] 크뢸러 뮐러 미술관</p>
+            <div class="price">
+              <p>입장권 15% 할인</p>
+              <p>2019년 3월 7일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/barcelona.png" alt="바르셀로나">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>바르셀로나</p>
+            <p>[바르셀로나] 가우디 &amp; 바르셀로나</p>
+            <p>전일투어</p>
+            <div class="price">
+              <p>40,000원</p>
+              <p>2019년 3월 15일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/vatican.png" alt="바티칸">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>로마</p>
+            <p>[로마] 바티칸 투어</p>
+            <div class="price">
+              <p>25,000원</p>
+              <p>2019년 3월 14일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab_4" class="tab_contents">
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/kauai.png" alt="카우아이섬">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>하와이</p>
+            <p>[카우아이] 카우아이섬 일주</p>
+            <p>일일관광 (주내선 포함)</p>
+            <div class="price">
+              <p>510,000</p>
+              <p>2019년 3월 7일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/yosemite.png" alt="요세미티 국립공원">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>센프라시스코</p>
+            <p>[센프라시스코] 요세미티 국립공원</p>
+            <p>일일투어 (영어가이드)</p>
+            <div class="price">
+              <p>206,300원</p>
+              <p>2019년 3월 11일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/horseshoebend.png" alt="홀스슈밴드">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>라스베가스</p>
+            <p>[라스베가스] 홀스슈밴드 일일투어</p>
+            <div class="price">
+              <p>입장권 15% 할인</p>
+              <p>2019년 3월 7일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/grandcircle.png" alt="그랜트서클">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>그랜드캐년</p>
+            <p>[라스베가스] 미서부 그랜트서클</p>
+            <p>캠핑카투어 5박 6일</p>
+            <div class="price">
+              <p>1,610,000원</p>
+              <p>2019년 3월 11일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab_5" class="tab_contents">
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/southern-guam.png" alt="괌 남부">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>괌</p>
+            <p>[괌] 남부 버스투어</p>
+            <div class="price">
+              <p>39,000</p>
+              <p>2019년 3월 10일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/sydney.png" alt="시드니">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>시드니</p>
+            <p>[시드니] 시내 야경투어</p>
+            <div class="price">
+              <p>41,500원</p>
+              <p>2019년 3월 7일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/starsand-beach.png" alt="괌 스타샌드비치">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>괌</p>
+            <p>[괌] 리티디안 북부투어</p>
+            <p>스타샌드비치 / 베스트포토스팟</p>
+            <div class="price">
+              <p>입장권 15% 할인</p>
+              <p>2019년 3월 7일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/dolphin-cruise.png" alt="돌핀크루즈">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>괌</p>
+            <p>[괌] 돌핀크루즈 투어</p>
+            <div class="price">
+              <p>55,000원</p>
+              <p>2019년 3월 10일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab_6" class="tab_contents">
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/jejucar.png" alt="제주도렌트카">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>제주</p>
+            <p>[제주] 제주도 렌트카</p>
+            <div class="price">
+              <p>11,000원</p>
+              <p>2019년 3월 9일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/Aqour.png" alt="아쿠아플라넷63">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>서울</p>
+            <p>[서울] 아쿠아플라넷63 종합권</p>
+            <div class="price">
+              <p>22,300원</p>
+              <p>즉시 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+                <img src="images/sokcho.png" alt="속초">
+              </div>
+            </div>
+          <div class="textarea">
+            <p>속초</p>
+            <p>[속초] 속초 당일여행코스</p>
+            <div class="price">
+              <p>52,000원</p>
+              <p>2019년 3월 16일부터 사용가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img_box">
+            <div class="scale">
+              <img src="images/daegwanryeong.png" alt="대관령">
+            </div>
+          </div>
+          <div class="textarea">
+            <p>대관령</p>
+            <p>[대관령] 대관령 하늘목장 체험</p>
+            <div class="price">
+              <p>전체 15%할인</p>
+              <p>즉시 사용가능</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promotion">
+      <div class="title_promotion">
+        <p>recommendation</p>
+        <h1>ONETOUR가 추천하는 프로모션</h1>
+      </div>
+      <div class="p_bxslider">
+        <ul class="bxslider">
+          <li><img src="images/p_festival.png" alt="festival"/></li>
+          <li><img src="images/p_lodgment.png" alt="lodgment"/></li>
+          <li><img src="images/p_NHcard.png" alt="NHcard"/></li>
+          <li><img src="images/P_already.png" alt="already"/></li>
+          <li><img src="images/p_rest.png" alt="rest"/></li>
+          <li><img src="images/p_coupon.png" alt="coupon"/></li>
+          <li><img src="images/p_money.png" alt="money"/></li>
+          <li><img src="images/p_mPoint.png" alt="mPoint"/></li>
+          <li><img src="images/p_SMfree.png" alt="SMfree"/></li>
+        </ul>
+        <div class="bx_btn">
+         <span id="slider-prev"> </span>
+         <span id="slider-next"> </span>
+       </div>
+      </div>
+    </section>
+
+    <section class="download_section">
+      <div class="d_inner">
+        <div class="notice">
+          <strong>즐거운 여행을 하고싶다면, ONE TOUR</strong>
+          <p>ONETOUR 앱에서도 여행정보를 얻을 수 있어요.
+            <br>모바일 ONETOUR를 지금 바로 만나세요.</p>
+          <div class="gogle">
+            <a href="#">
+              <img src="images/google.png" alt="googleplay">
+              <span>Google play</span>
+            </a>
+          </div>
+          <div class="app">
+            <a href="#">
+              <i class="fab fa-apple"></i>
+              <span>App Store</span>
+            </a>
+          </div>
+        </div>
+        <span>
+          <img src="images/phone.png" alt="phone">
+        </span>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <ul class="useful-links">
+          <li>ABOUT
+            <ul>
+              <li>서비스 소개</li>
+              <li>사이트맵</li>
+            </ul>
+          </li>
+          <li>HELP
+            <ul>
+              <li>FAQ</li>
+              <li>1:1 문의</li>
+              <li>공지사항</li>
+            </ul>
+          </li>
+          <li>TERMA OF USE
+            <ul>
+              <li>이용약관</li>
+              <li>개인정보처리방침</li>
+              <li>취소 및 환불정책</li>
+            </ul>
+          </li>
+          <li>PARTNERSHIP
+            <ul>
+              <li>가이드 등록</li>
+              <li>판매문의</li>
+              <li>마케팅 제휴문의</li>
+              <li>제휴프로그램안내</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="sns">
+          <p>SNS CHANNEL</p>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-line"></i></a>
+        </div>
+      </div>
+      <div class="information">
+        <p>(주)ONETOUR | 대표이사:이수정 | 개인정보책임자:이수정 | 사업자등록번호:000-11-222222 | 사업자정보확인 서울특별시 서울구 서울로 11(서울동)<br>고객센터 TEL:+82-1234-1234 (09:00~19:00 -한국기준- 토요일/공휴일 휴무) Fax:+82-1234-1234 E-mail:abc123@oneture.com<br>(주)ONETOUR는 통신판매의 당사자가 아닌 통신판매 중개업자로 상품 거래정보 및 거래등에 대해 책임을 지지 않습니다.<br>Copyright (주)ONETOUR All right reserved</p>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

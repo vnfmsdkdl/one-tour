@@ -1,0 +1,977 @@
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  }
+body{
+  height: 100%;
+  min-width: 1090px;
+  font-family: 'Noto Sans KR','맑은 고딕', sans-serif;
+  font-size: 100%;
+  line-height: 1;
+  color: #333;
+  }
+label{cursor:pointer;}
+i,em,address{font-style:normal; font-weight:normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+a:focus, button:focus, input:focus { outline: none;
+background: none;}
+.inner{
+  position: relative;
+  width: 1090px;
+  margin: 0 auto;
+  border: 1px solid white;
+  height: 60px;
+}
+.wrap{
+  position: relative;
+  min-width: 1090px;
+}
+/* 드래그 색변경 */
+::selection {
+  background:pink;
+  color:#fff;
+}
+
+select:hover{
+  border: 1px solid #b2b2b2;
+}
+
+/* header */
+header{
+  position: relative;
+  height: 190px;
+  background: white;
+}
+.headerTop{
+  position: relative;
+  width: 1090px;
+  margin: 0 auto;
+  height: 130px;
+  line-height: 130px;
+}
+.headerTop > form{
+  position: relative;
+  top: 50px;
+  width: 220px;
+  height: 34px;
+}
+i{
+  position: absolute;
+  top: 8px; right: 10px;
+  color: #3f51b5;
+}
+.headerTop > form > input{
+  position: absolute;
+  left: 0;
+  width: 220px;
+  height: 34px;
+  border-radius: 25px;
+  border: 1px solid #b2b2b2;
+  padding-left: 20px;
+}
+.headerTop > form > input:hover{
+  border: 1px solid #3f51b5;
+}
+.logo{
+  position: absolute;
+  left: 40%; top: 18px;
+}
+.logo > a >img{
+  width: 100%;
+}
+.login{
+  position: absolute;
+  top: 0; right: 0;
+  width: 130px;
+}
+.login > a{
+  color: #333;
+}
+.login > span{
+  color: #dee2e6;
+  padding: 0 5px;
+}
+
+
+/* nav */
+.menu{
+  position: relative;
+  min-width: 1090px;
+  border-top: 1px solid #dee2e6;
+  height: 60px;
+  z-index: 999;
+  /* display: none; */
+}
+.menuFixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.gnb{
+  width: 1090px;
+  margin: 0 auto;
+  z-index: 9;
+}
+.gnb > li{
+  float: left;
+  width: 218px; height: 60px;
+  text-align: center;
+  line-height: 60px;
+  display: block;
+}
+.gnb > li > a{
+  display: block;
+  color: black;
+  width: 218px;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+.gnb > li > a:hover{
+  color: #3f51b5;
+}
+.lnb{
+  position: absolute;
+  background: white;
+  height: 368px;
+  margin: 0 auto;
+  top: 59px;
+  display: none;
+}
+.lnb > li{
+  width: 218px;
+  display: block;
+}
+.lnb > li > a{
+  display: block;
+  color: #333;
+  width: 218px;
+}
+.lnb > li > a:hover{
+  color: #3f51b5;
+  font-weight: bold;
+
+}
+
+/* main_banner */
+.main_banner{
+  position: relative;
+  height: 590px;
+}
+.bx-wrapper{
+  border: none !important;
+}
+.main_bxslider{
+  width: 1920px;
+  min-width: 1090px;
+  margin: 0 auto;
+
+}
+.main_bxslider > li > img{
+  width: 100%;
+  height: 590px;
+}
+/* next button */
+.main_banner .bx-controls-direction{
+  display: none;
+}
+.main_banner .bx-pager{
+  position: absolute;
+  top: 470px;
+  min-width: 1090px;
+  height: 50px;
+  z-index: 2;
+}
+.bx-pager-item{
+  position: relative;
+  left: 445px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
+  background: #3f51b5 !important;
+  width: 30px !important;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+  background: white !important;
+  width: 30px !important;
+  height: 50px !important;
+  border-radius: 50%;
+}
+
+
+/* slogan */
+.slogan{
+  position: relative;
+  bottom: 360px;
+  margin: 0 auto;
+  width: 1090px;
+  height: 250px;
+  z-index: 1;
+}
+.slogan > strong{
+  font-size: 3.5em;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 5px blue, 0 0 5px #3f51b5;
+}
+.slogan > strong > p{
+  font-size: 80px;
+  margin-top: 20px;
+}
+.slogan > p{
+  margin-top: 20px;
+  font-size: 40px;
+  font-style: italic;
+  width: 170px;
+}
+.slogan > strong + p{
+  position: absolute;
+  bottom: 15px; left: 10px;
+  font-style: italic;
+  font-size: 31px;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 5px blue, 0 0 5px #3f51b5;
+}
+.mini_box{
+  position: absolute;
+  bottom: 0;
+  border: 16px solid #3f51b5;
+  width: 200px;
+}
+
+
+/* search_section */
+.search_section{
+  position: relative;
+  width: 1090px;
+  height: 263px;
+  margin: 100px auto 100px auto;
+}
+.search_section > ul.tabs{
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #3f51b5;
+  overflow: hidden;
+}
+.search_section > ul.tabs li{
+  float: left;
+  border: 1px solid #3f51b5;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #3f51b5;
+}
+.search_section > ul.tabs > li.current{
+  background: #3f51b5;
+  color: white;
+}
+.tab_content, .tab_contents{
+  display: none;
+}
+.tab_content.current, .tab_contents.currents{
+  display: block;
+}
+/* hotel */
+.hotelTop, .airTop{
+  position: relative;
+  height: 168px;
+}
+.hotelTop > form, .airTop > form{
+  position: absolute;
+  top: 0;
+  width: 350px;
+  height: 99.5px;
+  margin-top: 14.75px;
+}
+.hotelTop > form > label, .airTop > form > label{
+  position: absolute;
+}
+.hotelTop > form > #searchinput{
+  position: absolute;
+  width: 350px;
+  height: 70px;
+  margin-top: 29.5px;
+  padding-left: 50px;
+  border: 1px solid #b2b2b2;
+  z-index: 1;
+}
+i.fa-map-marker-alt, i.fa-calendar-alt,
+i.fa-bed{
+  position: absolute;
+  left: 15px; top: 52px;
+  width: 18px;
+  z-index: 2;
+  font-size: 1.5em;
+}
+.hotelTop > form:nth-child(4) > i.fa-user{
+  position: absolute;
+  right: 140px; top: 52px;
+  width: 18px;
+  z-index: 2;
+  font-size: 1.5em;
+}
+/* searchclear */
+input[type=text]:-ms-clear{
+  display: none;
+}
+#searchclear {
+  position: absolute;
+  left: 300px;
+  top: 70px;
+  bottom: 0;
+  width: 10px;
+  height: 14px;
+  margin: auto;
+  cursor: pointer;
+  color: #3f51b5;
+  z-index: 1;
+  height: 44px; width: 44px;
+  transform: translateY(-50%);
+}
+#searchclear::after, #searchclear::before{
+  content: '';
+  position: absolute;  height: 3px;
+  width: 20px;
+  left: 50%; top: 50%;
+  background: #3f51b5;
+  backface-visibility: hidden;
+  z-index: 99999;
+}
+#searchclear::after{
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  z-index: 99999;
+}
+#searchclear::before{
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  z-index: 99999;
+}
+.hotelTop > form:nth-child(2), .airTop > form:nth-child(3){
+  position: absolute;
+  left: 370px;
+  width: 175px;
+  height: 99.5px;
+  margin-top: 14.75px;
+  cursor: pointer;
+}
+.check-in{
+  width: 175px;
+  height: 70px;
+  margin-top: 29.5px;
+  padding-left: 55px;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+}
+.hotelTop > form:nth-child(3), .airTop > form:nth-child(4){
+  position: absolute;
+  left: 545px;
+  width: 175px;
+  height: 99.5px;
+  margin-top: 14.75px;
+  cursor: pointer;
+}
+.check-out{
+  width: 175px;
+  height: 70px;
+  margin-top: 29.5px;
+  padding-left: 55px;
+  cursor: pointer;
+  border: 1px solid #b2b2b2;
+  border-left: none;
+}
+.on{
+  display: none;
+}
+/* 달력 */
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover{
+  background: white !important;
+  border: 1px solid #3f51b5 !important;
+}
+.ui-widget-header{
+  border: none !important;
+  background: none !important;
+}
+/* 요일 */
+.ui-datepicker th{
+  padding-bottom: 15px !important;
+}
+/* 일 */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+  border: none !important;
+  background: none !important;
+}
+.ui-state-default{
+  font-size: 1.1em;
+  text-align: center !important;
+  padding: 7px !important;
+}
+.ui-state-default:hover{
+  color: white !important;
+  background: #3f51b5 !important;
+}
+.ui-datepicker{
+  width: 22em !important;
+  height: 17em !important;
+}
+.ui-state-highlight{
+  color: #3f51b5 !important;
+  font-weight: bold !important;
+}
+/* 주말색변경 */
+th.ui-datepicker-week-end:first-child,
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a {
+   color: #ff0100;
+}
+th.ui-datepicker-week-end:last-child,
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a{
+   color: #01a6ff;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+  background: pink!important;
+}
+/* 객실 */
+.hotelTop > form:nth-child(4), .airTop > form:nth-child(5){
+  position: absolute;
+  right: 0;
+  width: 350px;
+  height: 99.5px;
+  margin-top: 14.75px;
+  cursor: pointer;
+}
+.hotelTop > form:nth-child(4) > select{
+  width: 173.2px;
+  height: 70px;
+  margin-top: 29.5px;
+  padding-left: 55px;
+  cursor: pointer
+}
+.hotelTop > div{
+  position: absolute;
+  top: 130px; right: 0;
+  height: 29.5px;
+  color: #333;
+  cursor: pointer;
+}
+.hotelBottom{
+  position: absolute;
+  right: 0;
+}
+.hotelBottom > button{
+  width: 175px; height: 45px;
+  background: pink;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* tab2air */
+.airTop > form > #searchinput{
+  position: absolute;
+  width: 175px;
+  height: 70px;
+  margin-top: 29.5px;
+  padding-left: 50px;
+  z-index: 1;
+  border: 1px solid #b2b2b2;
+}
+.airTop > form:nth-child(2){
+  left: 175px;
+}
+.airTop > form:nth-child(2) > #searchinput{
+  border-left: none;
+}
+.airTop > form:nth-child(5) > select{
+  width: 114px;
+  height: 70px;
+  margin-top: 29.5px;
+  padding-left: 45px;
+  cursor: pointer;
+  text-align:center;
+}
+ form:nth-child(5) > i.adult{
+  position: absolute;
+  right: 320px; top: 52px;
+  width: 18px;
+  z-index: 2;
+  font-size: 1.5em;
+}
+form:nth-child(5) > i.child{
+ position: absolute;
+ right: 200px; top: 52px;
+ width: 18px;
+ z-index: 2;
+ font-size: 1.5em;
+}
+form:nth-child(5) > i.baby{
+ position: absolute;
+ right: 85px; top: 52px;
+ width: 18px;
+ z-index: 2;
+ font-size: 1.5em;
+}
+form:nth-child(6){
+  position: absolute;
+  top: 100px; right: 0px;
+  width: 200px;  height: 49px;
+  font-size: 1.1em;
+}
+.radio{
+  position: absolute;
+  cursor: pointer;
+  width: 100px; height: 49px;
+  line-height: 49px;
+}
+.radio2{
+  position: absolute;
+  cursor: pointer;
+  left: 100px;
+  width: 100px; height: 49px;
+  line-height: 49px;
+}
+.label{
+  position: absolute;
+  display: block;
+  float: left;
+  width: 20px;  height: 20px;
+  border: 2px solid #3f51b5;
+  border-radius: 100%;
+  top: 13px; left: 20px;
+}
+.label + p{
+  position: absolute;
+  left: 50px;
+}
+.label2{
+  position: absolute;
+  display: block;
+  float: left;
+  left: 180px;
+  width: 20px; height: 20px;
+  border: 2px solid #3f51b5;
+  border-radius: 100%;
+  top: 13px; left: 20px;
+}
+.label2 + p{
+  position: absolute;
+  left: 50px;
+}
+input[type="radio"]:checked + .label{
+  background:#3f51b5;
+  border: none;
+}
+input[type="radio"]:checked + .label2{
+  background:#3f51b5;
+  border: none;
+}
+.hidden{
+  display: none;
+}
+
+
+/* best_city */
+.best_city{
+  position: relative;
+  width: 1090px;
+  height: 860px;
+  /* background: brown; */
+  margin: 0 auto 100px auto;
+}
+.title_city{
+  position: absolute;
+  left: 430px;
+  width: 720px; height: 190px;
+}
+.rank_04 > a > strong{
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+.title_city > P {
+  position: absolute;
+  top: 0;
+  border: 3px solid #3f51b5;
+  border-radius: 40px;
+  width: 200px; height: 35px;
+  line-height: 30px;
+  font-size: 1.1em;
+  text-align: center;
+  color: #3f51b5;
+}
+.title_city > h1{
+  font-size: 2em;
+  position: absolute;
+  top: 70px;
+}
+.best_city > ul > li > a > img{
+  border-radius: 15px;
+}
+.cover{
+  content: '';
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  filter: alpha(opacity=60);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.5) 100%);
+  border-radius: 15px;
+}
+.best_city > ul > li > a > p{
+  position: absolute;
+  z-index: 3;
+  bottom: 40px; left: 40px;
+  font-size: 1.5em;
+  color: white;
+}
+.rank_01{
+  position: absolute;
+  width: 338px; height: 530px;
+}
+.rank_01 > a > img{
+  width: 338px; height: 530px;
+}
+.rank_02{
+  position: absolute;
+  top: 190px; left: 378px;
+}
+.rank_03{
+  position: absolute;
+  top: 190px; right: 0;
+}
+.rank_04{
+  position: absolute;
+  bottom: 0;
+}
+.rank_05{
+  position: absolute;
+  bottom: 0; left: 282px;
+}
+.rank_06{
+  position: absolute;
+  bottom: 0; right: 283px;
+}
+.rank_07{
+  position: absolute;
+  bottom: 0; right: 0;
+}
+
+
+/* special_offers */
+.special_offers{
+  position: relative;
+  width: 1090px;
+  height: 580px;
+  /* background: pink; */
+  margin: 0 auto 100px auto;
+}
+.title_offers{
+  position: relative;
+  width: 100%; height: 140px;
+}
+.title_offers > P  {
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  border: 3px solid #3f51b5;
+  border-radius: 40px;
+  width: 200px; height: 35px;
+  line-height: 30px;
+  font-size: 1.1em;
+  text-align: center;
+}
+.title_offers > h1{
+  position: absolute;
+  top: 70px;
+  left: 50%; transform: translateX(-50%);
+  font-size: 2em;
+}
+.special_offers > ul.tabs{
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  overflow: hidden;
+  height: 70px;
+}
+.special_offers > ul.tabs > li{
+  float: left;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+.tabs > .currents{
+  border-bottom: 3px solid #3f51b5;
+  color: #3f51b5;
+}
+.special_offers > .tab_contents{
+  position: relative;
+  top: 70px;
+  height: 370px; width: 1090px;
+}
+/* 카드ui */
+.card{
+  width: 242.5px; height: 370px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 24px rgba(0,0,0,.4);
+  /* background: yellow; */
+}
+.card:last-child{
+  margin-right: 0;
+}
+.img_box{
+  width:242.5px; height:180px;
+  overflow:hidden;
+  border-radius: 10px 10px 0 0;
+}
+.scale {
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px 10px 0 0;
+}
+.card:hover .scale {
+  transform: scale(1.1);
+}
+.textarea{
+  height: 185px;
+  padding: 25px 0 25px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.textarea > p:first-child{
+  font-size: 0.8em;
+}
+.textarea > p{
+  margin-bottom: 13px;
+  font-weight: bold;
+}
+.price{
+  margin-top: 44px;
+}
+.price > p:first-child{
+  color: #3f51b5;
+  font-weight: bold;
+}
+.price > p:last-child{
+  padding-top: 20px;
+  font-size: 0.8em;
+}
+#tab_1> .card:first-child > .textarea >.price,
+#tab_2 > .card:first-child > .textarea >.price,
+#tab_2 > .card:last-child > .textarea >.price,
+#tab_3 > .card:nth-of-type(3) > .textarea >.price,
+#tab_4 > .card:first-child > .textarea >.price,
+#tab_4 > .card:nth-of-type(2) > .textarea >.price,
+#tab_4 > .card:last-child > .textarea >.price,
+#tab_5 > .card:nth-of-type(3) > .textarea >.price{
+  margin-top: 8px;
+}
+
+
+/* promotion */
+.promotion{
+  position: relative;
+  height: 355px;
+  /* background: green; */
+  width: 1090px;
+  margin: 0 auto 190px auto;
+}
+.title_promotion{
+  position: relative;
+  width: 100%; height: 140px;
+}
+.title_promotion > P  {
+  position: absolute;
+  border: 3px solid #3f51b5;
+  border-radius: 40px;
+  width: 200px; height: 35px;
+  line-height: 30px;
+  font-size: 1.1em;
+  text-align: center;
+}
+.title_promotion > h1{
+  position: absolute;
+  top: 70px;
+  font-size: 2em;
+}
+/* promotion bxslider */
+.p_bxslider{
+  position: relative;
+  width: 1090px;
+  margin-left: 1px;
+}
+.bxslider{
+  overflow: hidden;
+}
+.bx-prev{
+  position: absolute;
+  left: -30px; top: 80px;
+  font-size: 40px;
+  text-decoration: none;
+}
+.bx-next{
+  position: absolute;
+  right: -76px; top: 80px;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+
+/* download_section */
+.download_section{
+  position: relative;
+  height: 390px;
+  background: #3f51b5;
+  margin: 0 auto 100px auto;
+}
+.d_inner{
+  position: relative;
+  width: 1090px;
+  height: 390px;
+  margin: 0 auto;
+}
+.notice{
+  position: absolute;
+  top: 65px;
+  height: 265px;
+  width: 790px;
+  color: white;
+}
+.notice > strong{
+  font-size: 2.7em;
+}
+.notice > strong + p{
+  padding: 40px 0;
+  line-height: 40px;
+  font-size: 1.4em;
+}
+.gogle, .app{
+  float: left;
+  width: 200px; height: 60px;
+  background: rgba(255, 254, 254, 0.24);
+  margin-right: 20px;
+}
+.gogle > a, .app > a {
+  position: absolute;
+  width: 200px; height: 60px;
+}
+.gogle > a > img {
+  position: absolute;
+  bottom: 15px; left: 30px;
+}
+.gogle > a > span{
+  position: absolute;
+  bottom: 23px; left: 80px;
+  color: white;
+}
+.app > a > i{
+  position: absolute;
+  color: white;
+  top: 10px; left: 40px;
+  font-size: 30px;
+}
+.app > a > span{
+  position: absolute;
+  bottom: 23px; left: 80px;
+  color: white;
+  width: 80px;
+}
+.d_inner > span > img{
+  position: absolute;
+  right: 0; bottom: 0;
+  box-shadow: 1px 0 0px 1px rgba(182, 180, 180, 0.4);
+  border-radius: 30px 30px 0 0;
+}
+
+
+/* footer */
+footer{
+  position: relative;
+  width: 1090px; height: 400px;
+  margin: 0 auto;
+  /* background: pink; */
+}
+.container{
+  border-bottom: 1px solid #b2b2b2;
+}
+.useful-links{
+  width: 790px;
+  height: 168px;
+  font-size: 1.2em;
+}
+.useful-links > li{
+  float: left;
+  margin-left: 106px;
+}
+.useful-links > li:first-child{
+  margin-left: 0;
+}
+.useful-links > li > ul{
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 8px;
+}
+.useful-links > li > ul > li{
+  padding-top: 15px;
+}
+.sns{
+  position: absolute;
+  top: 0; right: 0;
+  width: 300px; height: 168px;
+  font-size: 1.2em;
+  text-align: center;
+}
+.sns > a{
+  float: left;
+  display: block;
+  background: #b2b2b2;
+  border-radius: 50%;
+  width: 46px; height: 46px;
+  margin: 45px 0 0 12px;
+}
+.sns > a:first-child{
+  margin: 0;
+}
+.fa-facebook-f{
+  position: absolute;
+  top: 77px; left: 25px;
+  color: white;
+  width: 20px; height: 20px;
+}
+.fa-instagram{
+  position: absolute;
+  top: 77px; left: 83px;
+  color: white;
+  width: 20px; height: 20px;
+}
+.fa-youtube{
+  position: absolute;
+  top: 77px; left: 140px;
+  color: white;
+  width: 20px; height: 20px;
+}
+.fa-google-plus-g{
+  position: absolute;
+  top: 77px; right: 80px;
+  color: white;
+  width: 20px; height: 20px;
+}
+.fa-line{
+  position: absolute;
+  top: 77px; right: 21px;
+  color: white;
+  width: 20px; height: 20px;
+}
+.information{
+  width: 1090px;
+  margin-top: 30px;
+}
+.information > p{
+  line-height: 30px;
+}
